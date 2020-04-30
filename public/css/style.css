@@ -1,0 +1,105 @@
+.home-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.home-buttons button {
+    margin: 10px !important;
+}
+
+.riya h1, .riya h3{
+    color:white;
+}
+
+
+/
+
+
+/********************************/
+/*          Media Queries       */
+/********************************/
+@media screen and (min-width: 980px){
+    .hero { width: 980px; }    
+}
+@media screen and (max-width: 640px){
+    .hero h1 { font-size: 4em; }    
+}
+
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+body {
+    background-color: #e7e7e7;
+}
+
+.navbar {
+    background-color:#7d5e5e;
+}
+
+.navbar a{
+    color:#fff !important;
+}
+
+.nav-item {
+    font-family: 'Trocchi', serif;
+    font:30px;
+    margin: 0 auto;
+    padding: 5px 5px;
+    text-align: center;
+}
+.nav-item a {
+    color: #FFF;
+    text-decoration: none;
+    font-family: 'Trocchi', serif;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+}
+
+
+/* Top & Bottom Borders Out */
+.topBotomBordersOut a:before, .topBotomBordersOut a:after {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content:"";
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.topBotomBordersOut a:before {
+    top: 0px;
+    transform: translateY(10px);
+}
+.topBotomBordersOut a:after {
+    bottom: 0px;
+    transform: translateY(-10px);
+}
+.topBotomBordersOut a:hover:before, .topBotomBordersOut a:hover:after {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+
+.side{
+    margin-left: 10px;
+    margin-top:8px;
+}
+.containers {
+    margin-left: auto;
+    font-size:25px;
+
+}
+
+.fontss {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    color: #FFF;
+    margin-left:10px;
+}

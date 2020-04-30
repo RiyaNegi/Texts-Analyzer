@@ -1,0 +1,66 @@
+create table users(
+   id INT NOT NULL AUTO_INCREMENT,
+   name VARCHAR(20) NOT NULL,
+   PRIMARY KEY (id)
+);
+
+create table chat_counts(
+    id INT NOT NULL AUTO_INCREMENT,
+    count INT,
+    user_id INT,
+    PRIMARY KEY (id)
+);
+
+create table sentiments(
+    id INT NOT NULL AUTO_INCREMENT,
+    negative FLOAT,
+    neutral FLOAT,
+    positive FLOAT,
+    user_id INT,
+    PRIMARY KEY (id)
+);
+
+create table chat_frequencies(
+    id INT NOT NULL AUTO_INCREMENT,
+    frequency VARCHAR(1000),
+    user_id INT,
+    PRIMARY KEY (id)
+);
+
+INSERT INTO users (name) VALUES("Neel Gandhi");
+INSERT INTO users (name) VALUES("Prachi Diwakar");
+INSERT INTO users (name) VALUES("Stemy Tomy");
+INSERT INTO users (name) VALUES("Ruks Bugga");
+INSERT INTO users (name) VALUES("Allen Thomas");
+INSERT INTO users (name) VALUES(" Mayank Pathak");
+INSERT INTO users (name) VALUES("Sayali Savane");
+INSERT INTO users (name) VALUES("Soham Gidwani");
+
+
+
+INSERT INTO chat_counts (count, user_id) VALUES(8303, 1);
+INSERT INTO chat_counts (count, user_id) VALUES(10340, 2);
+INSERT INTO chat_counts (count, user_id) VALUES(6105,6 );
+INSERT INTO chat_counts (count, user_id) VALUES(11350,5 );
+INSERT INTO chat_counts (count, user_id) VALUES(316,8 );
+
+
+INSERT INTO sentiments(negative, neutral, positive, user_id) VALUES(1.6822429906542056, 85.23364485981308, 13.08411214953271, 2);
+INSERT INTO sentiments(negative, neutral, positive, user_id) VALUES(1.3272556642981632, 94.66416409706395, 4.0085802386378875, 1);
+INSERT INTO sentiments(negative, neutral, positive, user_id) VALUES( 3.4482758620689653, 85.63218390804597,  10.919540229885058, 4);
+INSERT INTO sentiments(negative, neutral, positive, user_id) VALUES(1.5388583218707015, 95.3060522696011, 3.155089408528198, 5);
+INSERT INTO sentiments(negative, neutral, positive, user_id) VALUES(5.7717250324254215, 84.63035019455253, 9.597924773022049, 6);
+INSERT INTO sentiments(negative, neutral, positive, user_id) VALUES(1.2820512820512822, 87.17948717948718, 11.538461538461538, 7);
+INSERT INTO sentiments(negative, neutral, positive, user_id) VALUES(1.3468013468013469, 91.24579124579125, 7.407407407407407, 8);
+INSERT INTO sentiments(negative, neutral, positive, user_id) VALUES(2.1231422505307855, 77.70700636942675, 20.169851380042463, 9);
+
+INSERT INTO chat_frequencies(frequency, user_id) VALUES("{'0': 16, '1': 9, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 3, '10': 23, '11': 68, '12': 17, '13': 8, '14': 7, '15': 31, '16': 62, '17': 35, '18': 30, '19': 75, '20': 54, '21': 122, '22': 96, '23': 90}", 2);
+INSERT INTO chat_frequencies(frequency, user_id) VALUES("{'0': 419, '1': 132, '2': 3, '3': 3, '4': 0, '5': 5, '6': 1, '7': 84, '8': 107, '9': 292, '10': 301, '11': 320, '12': 139, '13': 94, '14': 133, '15': 150, '16': 132, '17': 358, '18': 464, '19': 530, '20': 1086, '21': 730, '22': 1195, '23': 769}", 1);
+INSERT INTO chat_frequencies(frequency, user_id) VALUES("{'0': 35, '1': 13, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 9, '10': 6, '11': 60, '12': 10, '13': 7, '14': 0, '15': 2, '16': 0, '17': 33, '18': 1, '19': 0, '20': 3, '21': 0, '22': 0, '23': 20}", 4);
+INSERT INTO chat_frequencies(frequency, user_id) VALUES("{'0': 581, '1': 102, '2': 74, '3': 4, '4': 2, '5': 5, '6': 6, '7': 60, '8': 160, '9': 183, '10': 413, '11': 360, '12': 275, '13': 236, '14': 499, '15': 354, '16': 361, '17': 370, '18': 771, '19': 921, '20': 1143, '21': 939, '22': 2155, '23': 1283}", 5);
+INSERT INTO chat_frequencies(frequency, user_id) VALUES("{'0': 298, '1': 14, '2': 4, '3': 10, '4': 2, '5': 4, '6': 12, '7': 44, '8': 30, '9': 89, '10': 114, '11': 271, '12': 197, '13': 182, '14': 197, '15': 131, '16': 88, '17': 241, '18': 379, '19': 500, '20': 739, '21': 619, '22': 1207, '23': 1001}", 6);
+INSERT INTO chat_frequencies(frequency, user_id) VALUES("{'0': 0, '1': 0, '2': 0, '3': 0, '4': 1, '5': 0, '6': 0, '7': 0, '8': 17, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0, '14': 0, '15': 0, '16': 0, '17': 0, '18': 4, '19': 19, '20': 26, '21': 1, '22': 8, '23': 1}", 7);
+INSERT INTO chat_frequencies(frequency, user_id) VALUES("{'0': 11, '1': 31, '2': 5, '3': 1, '4': 0, '5': 0, '6': 0, '7': 2, '8': 9, '9': 42, '10': 29, '11': 71, '12': 8, '13': 1, '14': 1, '15': 2, '16': 0, '17': 5, '18': 11, '19': 4, '20': 2, '21': 21, '22': 41, '23': 24}", 8);
+INSERT INTO chat_frequencies(frequency, user_id) VALUES("{'0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 4, '7': 16, '8': 18, '9': 23, '10': 63, '11': 55, '12': 31, '13': 25, '14': 29, '15': 47, '16': 17, '17': 5, '18': 23, '19': 38, '20': 45, '21': 17, '22': 3, '23': 1}", 9);
+
+

@@ -1,0 +1,39 @@
+<link type="text/css" href="/css/sentiments.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" type="text/javascript"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" rel="stylesheet">
+
+<aside>
+    <ul>
+        {{#each sentiments}}
+            <li><span><a href="/sentiments?userId={{this.user_id}}">{{this.name}}</a></span><span></span></li>
+        {{/each}}
+    </ul>
+</aside>
+
+
+<div class="main-container">
+{{sentiment_data.name}}
+
+<canvas id="myChart" style="height: 20px !important;"></canvas>
+
+<script>
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+  type: 'pie',
+  data: {
+    labels: ["Neutral", "Positive", "Negative"],
+    datasets: [{
+      backgroundColor: [
+        "#2ecc71",
+        "#3498db",
+        "#95a5a6"
+      ],
+      data: ["{{sentiment_data.neutral}}", "{{sentiment_data.positive}}", "{{sentiment_data.negative}}"],
+
+    }]
+  }
+});
+
+</script>
+
+</div>
